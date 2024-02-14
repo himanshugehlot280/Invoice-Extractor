@@ -1,0 +1,25 @@
+---------------------------------Overview-------------------------------------------------
+
+This project is an Invoice Extractor built with Streamlit and Langchain. It allows users to upload PDF invoices, extract relevant information, and display the combined data in a CSV file.
+
+--------------------------------Project Structure-----------------------------------------
+
+app.py: The main Streamlit application file.
+Imports necessary libraries and defines the main Streamlit app.
+Handles file uploads, document processing, and data extraction.
+
+utils.py: A utility module containing functions for PDF text extraction, Langchain integration, data processing, and more.
+Functions include get_pdf_text, create_docs, create_embeddings_load_data, push_to_pinecone, pull_from_pinecone, similar_docs, extract_data, and to_df.
+
+---------------------------------Usage-----------------------------------------------------
+
+Upload PDF invoices using the file uploader.
+Click the "Publish" button to push data to Pinecone for vector storage.
+Click the "Extract" button to fetch relevant documents from Pinecone and display the combined data.
+
+---------------------------------Additional Notes------------------------------------------
+
+The project utilizes Langchain for text extraction from PDFs and Pinecone for vector storage.
+Ensure your Pinecone API key is set up in the environment variables.
+The extracted data is displayed in a Streamlit interface and saved to 'combined_data.csv'.
+Feel free to customize the project based on your specific requirements and data extraction templates. 
